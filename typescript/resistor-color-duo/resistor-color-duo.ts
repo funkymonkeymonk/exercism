@@ -20,7 +20,7 @@ export class ResistorColor {
             'white': 9
         };
 
-        const reducer = (acc:number , currVal:string, curIndex:number) => acc + colorVals[currVal] * 10 ** curIndex;
-        return this.colors.reverse().reduce(reducer ,0);
+        const [tensColor, onesColor] = this.colors
+        return colorVals[tensColor] * 10 + colorVals[onesColor]
     };
 }
