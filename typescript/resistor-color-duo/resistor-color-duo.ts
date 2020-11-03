@@ -1,9 +1,6 @@
 export class ResistorColor {
-    private colors: string[];
-
-    constructor(colors: string[]) {
+    constructor(private colors: string[]) {
         if (colors.length < 2) throw `At least two colors need to be present`
-        this.colors = colors.slice(0, 2);
     }
 
     value = (): number => {
